@@ -7,28 +7,43 @@ export const Title = styled.span`
     white-space: nowrap;
     pointer-events: none;
     transition: 0.4s;
+    margin-left: 50px;
+`;
+
+export const Icon = styled.div`
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s ease-in-out;
+    svg {
+        color: #fff;
+    }
 `;
 
 export const ContainerItem = styled.a`
+    position: relative;
     display: flex;
+    align-items: center;
     height: 100%;
     width: 100%;
     border-radius: 12px;
-    align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
     background: #11101d;
-    > svg {
-        height: 50px;
-        line-height: 50px;
-        border-radius: 12px;
-        color: #fff;
-        margin: 0 10px;
-    }
     &:hover {
         background: #fff;
-        ${Title}, svg {
+        ${Title} {
             color: #11101d;
+        }
+        ${Icon} {
+            svg {
+                color: #11101d;
+            }
         }
     }
 `;
@@ -54,6 +69,7 @@ export const Wrapper = styled.li`
     position: relative;
     margin: 8px 0;
     list-style: none;
+    height: 50px;
     &:hover {
         ${Tooltip} {
             opacity: 1;

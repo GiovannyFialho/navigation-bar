@@ -1,7 +1,11 @@
 import styled, { css } from "styled-components";
 
+import * as itemMenu from "components/ItemMenu/styles";
+import * as ItemsMenu from "components/ItemsMenu/styles";
+
 export const LogoContainer = styled.div`
     display: flex;
+    justify-content: center;
     align-items: center;
     height: 60px;
     position: relative;
@@ -32,11 +36,35 @@ const wrapperModifiers = {
         ${Logo} {
             opacity: 1;
         }
+
+        ${ItemsMenu.SearchContainer} {
+            input {
+                padding: 0 20px 0 50px;
+                width: 100%;
+            }
+        }
+
+        ${itemMenu.Tooltip} {
+            display: none;
+        }
     `,
     close: () => css`
         width: 78px;
 
         ${Logo} {
+            opacity: 0;
+        }
+
+        ${ItemsMenu.Icon} {
+            &:hover {
+                background-color: #fff;
+                svg {
+                    color: #1d1b31;
+                }
+            }
+        }
+
+        ${itemMenu.Title} {
             opacity: 0;
         }
     `

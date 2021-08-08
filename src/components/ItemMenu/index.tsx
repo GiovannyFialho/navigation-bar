@@ -1,4 +1,4 @@
-import { Wrapper, ContainerItem, Tooltip, Title } from "./styles";
+import { Wrapper, ContainerItem, Tooltip, Title, Icon } from "./styles";
 
 export type ItemMenuProps = {
     link: string;
@@ -9,7 +9,7 @@ export type ItemMenuProps = {
 const ItemMenu = ({ link, icon, title }: ItemMenuProps) => (
     <Wrapper>
         <ContainerItem href={link}>
-            {icon}
+            <Icon>{icon}</Icon>
             <Title>{title}</Title>
         </ContainerItem>
         <Tooltip>{title}</Tooltip>
