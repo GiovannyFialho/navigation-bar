@@ -13,10 +13,7 @@ const Sidebar = ({ logo }: SidebarProps) => {
 
     return (
         <Wrapper isOpen={isOpen}>
-            <LogoContainer
-                aria-label="logo container"
-                onClick={() => setIsOpen(!isOpen)}
-            >
+            <LogoContainer onClick={() => setIsOpen(!isOpen)}>
                 <Logo>{logo}</Logo>
                 <ContainerIconMenu>
                     {!isOpen ? <Menu size={25} /> : <MenuAltRight size={22} />}
