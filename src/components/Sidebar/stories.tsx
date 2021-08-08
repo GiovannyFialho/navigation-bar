@@ -11,6 +11,6 @@ export default {
 export const Default: Story<SidebarProps> = (args) => <Sidebar {...args} />;
 
 Default.args = {
-    logo: "GF",
+    logo: "Giovanny",
     items: itemsMock
 };

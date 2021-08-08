@@ -5,7 +5,6 @@ import * as ItemsMenu from "components/ItemsMenu/styles";
 
 export const LogoContainer = styled.div`
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 60px;
     position: relative;
