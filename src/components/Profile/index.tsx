@@ -17,7 +17,7 @@ const Profile = ({ img, name, job }: ProfileProps) => (
                 <p>{job}</p>
             </NameJobContainer>
         </Details>
-        <ContainerLogout>
+        <ContainerLogout href="#">
             <LogOut size={22} />
         </ContainerLogout>
     </Wrapper>

@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 import * as itemMenu from "components/ItemMenu/styles";
 import * as ItemsMenu from "components/ItemsMenu/styles";
+import * as Profile from "components/Profile/styles";
 
 export const LogoContainer = styled.div`
     display: flex;
@@ -46,6 +47,17 @@ const wrapperModifiers = {
         ${itemMenu.Tooltip} {
             display: none;
         }
+
+        ${Profile.Wrapper} {
+            width: 250px;
+        }
+        ${Profile.Details} {
+            opacity: 1;
+        }
+        ${Profile.ContainerLogout} {
+            width: 50px;
+            background: none;
+        }
     `,
     close: () => css`
         width: 78px;
@@ -65,6 +77,17 @@ const wrapperModifiers = {
 
         ${itemMenu.Title} {
             opacity: 0;
+        }
+
+        ${Profile.Wrapper} {
+            width: 78px;
+        }
+        ${Profile.Details} {
+            opacity: 0;
+        }
+        ${Profile.ContainerLogout} {
+            width: 100%;
+            background: #1d1b31;
         }
     `
 };

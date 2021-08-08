@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.li`
+export const Wrapper = styled.div`
     position: fixed;
+    display: flex;
+    align-items: center;
     height: 60px;
-    width: 78px;
     left: 0;
-    bottom: -8px;
+    bottom: 0;
     padding: 10px 14px;
     background: #1d1b31;
-    transition: all 0.5s ease;
+    transition: width 0.5s ease-in-out;
     overflow: hidden;
     list-style: none;
 `;
@@ -17,6 +18,7 @@ export const Details = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    transition: opacity 0.5s ease-in-out;
 
     img {
         height: 45px;
@@ -28,24 +30,22 @@ export const Details = styled.div`
 `;
 
 export const NameJobContainer = styled.div`
+    margin-right: 10px;
     p {
         font-size: 15px;
         font-weight: 400;
         color: #fff;
         white-space: nowrap;
-        &::last-child {
+        &:last-child {
             font-size: 12px;
         }
     }
 `;
 
-export const ContainerLogout = styled.div`
+export const ContainerLogout = styled.a`
     position: absolute;
-    top: 50%;
     right: 0;
-    transform: translateY(-50%);
-    background: #1d1b31;
-    width: 100%;
+    transform: translateX(30%);
     height: 60px;
     line-height: 60px;
     border-radius: 0px;

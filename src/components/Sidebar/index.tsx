@@ -4,15 +4,17 @@ import { MenuAltRight } from "@styled-icons/boxicons-regular/MenuAltRight";
 
 import ItemsMenu from "components/ItemsMenu";
 import { ItemMenuProps } from "components/ItemMenu";
+import Profile, { ProfileProps } from "components/Profile";
 
 import { Wrapper, LogoContainer, Logo, ContainerIconMenu } from "./styles";
 
 export type SidebarProps = {
     logo: React.ReactNode;
     items: ItemMenuProps[];
+    profile: ProfileProps;
 };
 
-const Sidebar = ({ logo, items }: SidebarProps) => {
+const Sidebar = ({ logo, items, profile }: SidebarProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -24,6 +26,7 @@ const Sidebar = ({ logo, items }: SidebarProps) => {
                 </ContainerIconMenu>
             </LogoContainer>
             <ItemsMenu items={items} />
+            <Profile img={profile.img} name={profile.name} job={profile.job} />
         </Wrapper>
     );
 };
