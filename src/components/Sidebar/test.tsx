@@ -4,10 +4,6 @@ import Sidebar from ".";
 
 describe("<Sidebar />", () => {
     it("should render component", () => {
-        const { container } = render(<Sidebar />);
-
-        expect(
-            screen.getByRole("heading", { name: /Sidebar/i })
-        ).toBeInTheDocument();
+        render(<Sidebar logo="Giovanny Logo" />);
     });
 });
