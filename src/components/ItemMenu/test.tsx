@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { Dashboard } from "@styled-icons/boxicons-solid/Dashboard";
 
-import ItemsMenu, { ItemsMenuProps } from ".";
+import ItemMenu, { ItemMenuProps } from ".";
 
-const props: ItemsMenuProps = {
+const props: ItemMenuProps = {
     link: "#",
     icon: <Dashboard size={18} />,
     title: "Dashboard"
 };
 
-describe("<ItemsMenu />", () => {
+describe("<ItemMenu />", () => {
     it("should render item menu", () => {
-        render(<ItemsMenu {...props} />);
+        render(<ItemMenu {...props} />);
 
         expect(
             screen.getByRole("link", { name: /Dashboard/i })

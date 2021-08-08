@@ -1,12 +1,12 @@
 import { Wrapper, ContainerItem, Tooltip, Title } from "./styles";
 
-export type ItemsMenuProps = {
+export type ItemMenuProps = {
     link: string;
     icon: React.ReactNode;
     title: string;
 };
 
-const ItemsMenu = ({ link, icon, title }: ItemsMenuProps) => (
+const ItemMenu = ({ link, icon, title }: ItemMenuProps) => (
     <Wrapper>
         <ContainerItem href={link}>
             {icon}
@@ -16,4 +16,4 @@ const ItemsMenu = ({ link, icon, title }: ItemsMenuProps) => (
     </Wrapper>
 );
 
-export default ItemsMenu;
+export default ItemMenu;
